@@ -205,6 +205,9 @@ footer ul {
 
 /** Responsive Desgin **/
 @media screen and (width <= 900px) {
+    body {
+       max-width: 100%;
+    }
     .header_ {
         min-height: 80px;
     }
