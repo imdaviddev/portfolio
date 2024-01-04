@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function(){
         opcionesNavbar.classList.toggle("show-navbar_")
     })
     
+    /** Carrusel de Habilidades */
+    
 
 
 

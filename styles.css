@@ -184,6 +184,63 @@ main {
     max-width: 1600px;
 }
 
+/** Galeria de habilidades **/
+.habilidades-section_ {
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.habilidades-section_ h2{
+    font-size: 3rem;
+}
+
+.galeria-habilidades_ {
+    display: flex;
+    position: relative;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    border-radius: 2rem;
+}
+
+.galeria-habilidades_ .habilidad_ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--cls-bg);
+
+    font-weight: bolder;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+
+    background-color: #ffffffd8;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    margin: 1rem;
+
+    border-right: solid 10px rgb(70, 65, 65);
+    border-bottom: solid 10px rgb(70, 67, 67);
+    border-top: solid 1px rgb(87, 81, 81);
+
+    cursor: pointer;
+    transition: border 0.2 ease-in-out;
+}
+
+.galeria-habilidades_ .habilidad_ img {
+    width: 10rem;
+}
+
+.galeria-habilidades_ .habilidad_:hover {
+    border: none;
+}
+
 /** Footer **/
 footer {
     background-color: black;
@@ -198,7 +255,7 @@ footer {
 footer ul {
     display: flex;
     flex-wrap: wrap;
-    font-size: 10px;
+    font-size: 20px;
     gap: 1rem;
 }
 
@@ -230,6 +287,7 @@ footer ul {
         background-color: black;
 
         transition: right 0.6s ease-in;
+        
     }
 
     .header_ .navbar_ ul.show-navbar_ {

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto Burbuja</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+
+            background-color: rgb(29, 29, 78);
+        }
+
+
+        .burbujas_ {
+            position: fixed;
+            display: flex;
+            z-index: 0;
+        }
+        .burbujas_ span {
+            z-index: 0;
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background-color: aquamarine;
+            margin: 0 4px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.205), 
+                        0 0 50px rgba(127, 255, 212, 0.603),
+                        0 0 100px aquamarine;
+            animation: animate 15s linear infinite;
+            animation-duration: calc(125s / var(--i));
+        }
+
+        .burbujas_ span:nth-child(even) {
+            background-color: #c94444;
+            box-shadow: 0 0 0 10px rgb(73, 28, 28)6, 
+            0 0 50px #b32e2e,
+            0 0 100px #c94444;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(100VH) scale(0);
+            }
+            100% {
+                transform: translateY(-20vh) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <ul class="burbujas_">
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:11;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:27;"></span>
+        <span style="--i:30;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:25;"></span>
+      </ul>
+</body>
+</html>
