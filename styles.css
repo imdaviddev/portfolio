@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Sixtyfour&family=Workbench&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    color: #f1f1f1;
+
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+
+    cursor: default;
+
+    background: linear-gradient(160deg,rgb(93, 0, 0), 20%, rgb(35, 39, 95), 80%, rgba(118, 18, 18, 0.72));
+
+    font-family: 'Poppins', sans-serif;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/** Header **/
+.header {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(150deg ,crimson, 20%, rgb(9, 4, 60), 80%, black) ;
+    border-bottom: solid 1px white;
+}
+
+.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    height: 100%;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+
+    padding: 1rem 1.5rem;
+}
+
+.navbar .logo h1 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .logo img {
+    width: 60px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+
+.navbar .navbar-menu {
+    display: flex;
+    align-items: center;   
+    height: 100%;
+}
+
+.navbar .navbar-menu li {
+    display: flex;
+    align-items: center;
+    padding: 0 1.8rem;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+.navbar .navbar-menu li:hover {
+    background-color: rgba(220, 20, 60, 0.594);
+    color: rgb(255, 255, 255);
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 0;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+
+    cursor: pointer;
+
+    display: none;
+}
+.toggle-btn span{
+    display: block;
+    width: 60px;
+    height: 4px;
+    border-radius: 1rem;
+    background-color: white;
+    margin: 5px;
+
+}
+
+.toggle-btn:hover span {
+    background-color: gray;
+}
+
+.toggle-btn.open {
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    right: 0;
+    margin: 3rem 2rem;
+}
+.toggle-btn.open span:nth-child(1),
+.toggle-btn.open span:nth-child(2){
+    background-color: red;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 30px;
+}
+
+.toggle-btn.open span:nth-child(3){
+    transform: rotate(-45deg);
+    width: 30px;
+    background-color: red;
+}
+
+
+/** Main **/ 
+.main {
+    padding: 0 2rem;
+}
+
+.hero {
+    height: 20rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgba(141, 96, 11, 0.267);
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    font-family: 'Workbench', sans-serif;
+}
+
+.hero h1 span {
+    display: block;
+}
+
+.hero h1 .name {
+    border-bottom: solid 1px white;
+}
+
+.hero h1 .job {
+    font-size: 1rem;
+}
+
+.portada i {
+    color: rgba(231, 127, 9, 0.476);
+    font-size: 7rem;
+
+    animation: infinite cafecito ease-in;
+}
+
+.portada i:hover {
+    cursor: pointer;
+}
+
+@keyframes cafecito {
+    0%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+/** ABout me **/
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.about-me h2 {
+    position: absolute;
+    display: flex;
+    left: -3.5rem;
+    top: -5rem;
+    margin-top: 2rem;
+    background-color: crimson;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transform: rotate(-20deg);
+}
+
+.about-me .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.596);
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: solid white 1px;
+}
+
+/** Contactame **/
+.contactame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.contactame h2 {
+    background-color: crimson;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.375);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    border: solid 1px white;
+}
+
+.formulario form {
+    width: 100%;
+    max-width: 1200px;
+
+}
+
+.formulario .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.3rem;
+    gap: 0.5rem;
+}
+
+.formulario .input input,
+.formulario .input textarea{
+    border-radius: 0.3rem;
+}
+
+.formulario .input input{
+    height: 35px;
+    padding: 0.5rem;
+}
+
+.formulario .input textarea{
+    padding: 0.5rem;
+}
+
+.formulario .input input:focus,
+.formulario .input textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 2px 2px cyan, 2px 2px 0px 0px cyan;
+}
+
+.formulario button {
+    border: none;
+    background-color: transparent;
+    padding: 1rem;
+    background-color: crimson;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.formulario button:hover {
+    cursor: pointer;
+    background-color: rgb(149, 19, 45);
+}
+
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    padding: 2rem;
+}
+
+.redes i {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.866);
+    cursor: pointer;
+    margin: 2rem;
+}
+
+/** Carrusel fluido **/
+.stack {
+    position: relative;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.stack h2 {
+    background-color: crimson;
+    width: min-content;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.carrusel {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+
+    padding: 1rem;
+    margin-top: 20px;
+
+    border-top: solid white 3px;
+    border-bottom: solid white 3px;
+    background: linear-gradient(120deg, rgb(5, 17, 51), rgb(68, 5, 5));
+    border-radius: 0.2rem;
+}
+
+.carrusel-fluido {
+    display: flex;
+    animation: scroll 15s linear infinite;
+    -webkit-animation: scroll 15s linear infinite;
+    width: calc(200px * 12);
+}
+
+.carrusel-fluido .item {
+    width: 200px;
+}
+
+.carrusel .item img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(6 * -200px));
+    }
+}
+
+
+@media (max-width: 700px) {
+    .toggle-btn {
+        display: flex;
+    }
+
+    .navbar .navbar-menu {
+        display: none;
+    }
+
+    .navbar .toggle-menu.open {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        background-color: black;
+        height: 100vh;
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+    
+    .navbar .toggle-menu.open li {
+        height: auto;
+        padding: 2rem 3rem;
+        border-radius: 0.2rem;
+    }
+    
+}
